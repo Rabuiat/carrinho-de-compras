@@ -34,6 +34,7 @@ public class ProdutoTest {
         Object obj = new Produto("azeitona", 100);
         boolean result = produto.equals(obj);
         assertEquals(result, true);
+        
     }
 
     @Test
