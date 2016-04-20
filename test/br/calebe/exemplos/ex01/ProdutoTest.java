@@ -37,17 +37,10 @@ public class ProdutoTest {
     }
 
     @Test
-    public void testEquals_ProdutoPreco() {
-        Produto obj = new Produto("papel", 1.50);
-        double instance = produto.getPreco();
-        boolean result = produto.equals(obj.getPreco());
-        assertEquals(false, result);
-    }
-
-    @Test
     public void testEquals_ProdutoNome() {
-        Produto obj = new Produto("mouse", 35);
-        //Não existe método getNome na classe Produto, teste não pode ser executado
+        Produto obj = new Produto("azeitona", 100);
+        boolean result = produto.equals(obj);
+        assertEquals(result, true);
     }
 
 }
