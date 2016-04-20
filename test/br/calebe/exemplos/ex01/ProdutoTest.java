@@ -5,26 +5,22 @@
  */
 package br.calebe.exemplos.ex01;
 
-import org.junit.After;
-import org.junit.AfterClass;
+import static org.junit.Assert.assertEquals;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
  *
  * @author Rafael
  */
 public class ProdutoTest {
-    
+
     private Produto produto;
-   
+
     @Before
     public void criarProduto() {
         produto = new Produto("azeitona", 100);
     }
-    
 
     @Test
     public void testGetPreco() {
@@ -33,19 +29,13 @@ public class ProdutoTest {
         System.out.println(produto.getPreco());
     }
 
-    /**
-     * Test of equals method, of class Produto.
-     */
     @Test
     public void testEquals_Object() {
         Object obj = new Produto("azeitona", 100);
         boolean result = produto.equals(obj);
-        assertEquals(result, true);        
+        assertEquals(result, true);
     }
 
-    /**
-     * Test of equals method, of class Produto.
-     */
     @Test
     public void testEquals_ProdutoPreco() {
         Produto obj = new Produto("papel", 1.50);
@@ -53,12 +43,11 @@ public class ProdutoTest {
         boolean result = produto.equals(obj.getPreco());
         assertEquals(false, result);
     }
-    
-        @Test
+
+    @Test
     public void testEquals_ProdutoNome() {
         Produto obj = new Produto("mouse", 35);
         //Não existe método getNome na classe Produto, teste não pode ser executado
     }
-    
-   
+
 }
