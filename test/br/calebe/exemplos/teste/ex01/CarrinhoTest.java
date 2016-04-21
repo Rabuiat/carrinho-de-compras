@@ -55,9 +55,10 @@ public class CarrinhoTest {
         original = carrinho.menorProduto();
         assertEquals(original, copia);
     }
-    
+
     @Test
     public void contandoItensCarrinho() throws CarrinhoVazioExpected {
+        int contador = 4;
         Produto livro = new Produto("Senhor dos Aneis 1", 120.0);
         carrinho.add(livro);
         livro = new Produto("Senhor dos Aneis 2", 150.0);
@@ -66,10 +67,14 @@ public class CarrinhoTest {
         carrinho.add(livro);
         livro = new Produto("Batman Against the Injustice", 169.0);
         carrinho.add(livro);
+
+        /*for (Object a : carrinho) {
+            
+        }
+            contador++;
+        }
         
-        
-        int contador = 0;
-              
-        assertEquals(0, contador);
+        //Não é possível executar o teste porque não tem como percorrer o ArrayList de carrinho(Método privado).
+         */
     }
 }
