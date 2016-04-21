@@ -1,5 +1,6 @@
-package br.calebe.exemplos.ex02;
+package br.calebe.exemplos.teste.ex02;
 
+import br.calebe.exemplos.ex02.ClasseExemplo;
 import br.calebe.exemplos.ex02.controller.ClasseFacadeController;
 import junit.framework.Assert;
 import org.easymock.EasyMock;

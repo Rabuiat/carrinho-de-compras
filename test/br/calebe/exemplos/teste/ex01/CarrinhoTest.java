@@ -1,5 +1,8 @@
-package br.calebe.exemplos.ex01;
+package br.calebe.exemplos.teste.ex01;
 
+import br.calebe.exemplos.ex01.Carrinho;
+import br.calebe.exemplos.ex01.CarrinhoVazioExpected;
+import br.calebe.exemplos.ex01.Produto;
 import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
