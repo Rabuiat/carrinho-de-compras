@@ -67,7 +67,7 @@ public class CarrinhoTest {
         carrinho.add(livro);
         livro = new Produto("Batman Against the Injustice", 169.0);
         carrinho.add(livro);
-
+        
         /*for (Object a : carrinho) {
             
         }
