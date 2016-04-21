@@ -55,4 +55,21 @@ public class CarrinhoTest {
         original = carrinho.menorProduto();
         assertEquals(original, copia);
     }
+    
+    @Test
+    public void contandoItensCarrinho() throws CarrinhoVazioExpected {
+        Produto livro = new Produto("Senhor dos Aneis 1", 120.0);
+        carrinho.add(livro);
+        livro = new Produto("Senhor dos Aneis 2", 150.0);
+        carrinho.add(livro);
+        livro = new Produto("Senhor dos Anais 3", 169.0);
+        carrinho.add(livro);
+        livro = new Produto("Batman Against the Injustice", 169.0);
+        carrinho.add(livro);
+        
+        
+        int contador = 0;
+              
+        assertEquals(0, contador);
+    }
 }
