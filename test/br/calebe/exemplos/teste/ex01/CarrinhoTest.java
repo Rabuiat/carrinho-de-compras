@@ -4,6 +4,7 @@ import br.calebe.exemplos.ex01.Carrinho;
 import br.calebe.exemplos.ex01.CarrinhoVazioExpected;
 import br.calebe.exemplos.ex01.Produto;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotSame;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -67,7 +68,7 @@ public class CarrinhoTest {
         carrinho.add(livro);
         livro = new Produto("Batman Against the Injustice", 169.0);
         carrinho.add(livro);
-        
+                
         /*for (Object a : carrinho) {
             
         }
@@ -89,6 +90,7 @@ public class CarrinhoTest {
         double menor = carrinho.menorProduto().getPreco();
 
         assertEquals(carrinho.menorProduto(), livro1);
+        assertNotSame(carrinho.menorProduto(), livro3);
         /* Dois Preços Iguais só aponta pro primeiro */
     }
     
