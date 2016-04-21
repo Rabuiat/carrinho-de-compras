@@ -77,4 +77,19 @@ public class CarrinhoTest {
         //Não é possível executar o teste porque não tem como percorrer o ArrayList de carrinho(Método privado).
          */
     }
+    
+    @Test
+    public void doisItensPrecosIguais() throws CarrinhoVazioExpected {
+        Produto livro1 = new Produto("Universe in a nutshell", 77.0);
+        carrinho.add(livro1);
+        Produto livro2 = new Produto("Steve Jobs Biography", 100.0);
+        carrinho.add(livro2);
+        Produto livro3 = new Produto("Jack Black's Adventures", 77.0);
+        carrinho.add(livro3);
+        double menor = carrinho.menorProduto().getPreco();
+
+        assertEquals(carrinho.menorProduto(), livro1);
+        /* Dois Preços Iguais só aponta pro primeiro */
+    }
+    
 }
